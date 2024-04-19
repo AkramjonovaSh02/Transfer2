@@ -1,5 +1,6 @@
 from django.core.validators import MaxValueValidator
 from django.db import models
+from datetime import datetime
 
 class Davlat(models.Model):
     nom = models.CharField(max_length=255)
@@ -40,6 +41,13 @@ class Player(models.Model):
 
     def __str__(self):
         return self.ism
+
+    def yosh(self):
+        h_yil = datetime.now().year
+        t_yil = int(str(self.t_sana)[:4])
+
+        return h_yil - t_yil
+
 
 
 

@@ -12,7 +12,8 @@ class ClubAdmin(admin.ModelAdmin):
 class PlayerAdmin(admin.ModelAdmin):
     list_display = ('ism', 'raqam', 'club', 't_sana', 'maosh', 'narx', 'davlat', 'possitsiya')
     list_filter = ('club', 'davlat', 'possitsiya')
-    search_fields = ('ism', 'club__nom')
+    search_fields = ('ism', 'club')
+    autocomplete_fields = ('club', )
 @admin.register(Davlat)
 class DavlatAdmin(admin.ModelAdmin):
     list_display = ('nom',)

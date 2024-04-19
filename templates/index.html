@@ -1,14 +1,22 @@
 {% extends 'header.html' %}
 
+{% block title%}
+<title>Index</title>
+{% endblock %}
+
+{% block clubs_active %}
+clas="navActive"
+{% endblock %}
+
 {% block content %}
       <div class="latest-transfers">
         <div class="countries">
-          <a href="./clubs.html"> CLUBS </a>
-          <a href="./latest-transfers.html"> LATEST TRANSFERS </a>
-          <a href="./players.html"> PLAYERS </a>
-          <a href="./U-20 players.html"> U-20 PLAYERS </a>
-          <a href="./tryouts.html"> TRYOUTS </a>
-          <a href="./stats.html"> STATS </a>
+          <a href="{% url 'clubs' %}"> CLUBS </a>
+          <a href="{% url 'transfers' %}"> LATEST TRANSFERS </a>
+          <a href="{% url 'player-list'%}"> PLAYERS </a>
+          <a href="{% url 'u20'%}"> U-20 PLAYERS </a>
+          <a href="{% url 'tryouts' %}"> TRYOUTS </a>
+          <a href="{% url 'stats' %}"> STATS </a>
         </div>
       </div>
 {%endblock%}

@@ -9,92 +9,36 @@ clas="navActive"
 {% endblock %}
 
 {% block content %}
-      <div class="nav">
-        <h2>– Football Club Manchester City –</h2>
-        <table class="content-nav">
-          <thead>
-            <tr>
-              <td>player</td>
-              <td>positsion</td>
-              <td>nationality</td>
-              <td>
-                transfer value, <br />
-                mill. euro
-              </td>
-            </tr>
-          </thead>
-        </table>
-      </div>
-      <div class="content">
-        <table class="players">
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
 
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-          <tr>
-            <td>1 Phil Foden</td>
-            <td>Midf</td>
-            <td>England</td>
-            <td>130</td>
-          </tr>
-        </table>
+<div class="content">
+<h1>Club Players</h1>
+    <h2>{{ club.nom }} Players</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>İsm</th>
+                <th>Raqam</th>
+                <th>Tugilgan Sana</th>
+                <th>Maosh</th>
+                <th>Narx</th>
+                <th>Davlat</th>
+                <th>Pozitsiya</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in players %}
+            <tr>
+                <td>{{ player.ism }}</td>
+                <td>{{ player.raqam }}</td>
+                <td>{{ player.t_sana }}</td>
+                <td>{{ player.maosh }}</td>
+                <td>{{ player.narx }}</td>
+                <td>{{ player.davlat }}</td>
+                <td>{{ player.possitsiya }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae soluta
