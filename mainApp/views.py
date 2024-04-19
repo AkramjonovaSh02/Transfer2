@@ -6,7 +6,6 @@ class Home(View):
     def get(self, request):
         return render(request, "index.html")
 
-
 class About(View):
     def get(self, request):
         return render(request, "about.html")
@@ -15,6 +14,7 @@ class Tryouts(View):
     def get(self, request):
         return render(request, "tryouts.html")
 
+<<<<<<< HEAD
 class ClubsView(View):
     def get(self, request):
         context = {
@@ -61,3 +61,5 @@ class Stats(View):
         return render(request, "stats.html")
 
 
+=======
+>>>>>>> f8897e0a52e969a9380526cf19db2bdc80d2ca4b

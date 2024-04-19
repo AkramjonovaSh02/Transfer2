@@ -7,6 +7,7 @@ from statsApp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('', Home.as_view(), name='home'),
     path('tryouts/', Tryouts.as_view(), name='tryouts'),
     path('about/', About.as_view(), name='about'),
@@ -23,4 +24,8 @@ urlpatterns = [
     path('150transfers', Transfers150View.as_view(), name='150transfers'),
     path('expenditure/', Top50transfersbyexpendeture.as_view(), name='expenditure'),
 
+=======
+    path('', Home.as_view(), name="home"),
+   
+>>>>>>> f8897e0a52e969a9380526cf19db2bdc80d2ca4b
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
